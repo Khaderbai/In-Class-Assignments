@@ -66,5 +66,13 @@ public class PlayerMovement : MonoBehaviour
         return transform.Find("GroundCheck").GetComponent<GroundCheck>().isGrounded;
 
     }
+    private void OnTriggerEnter2D (Collider2D collision)
+    {
+        // Check to see if enemy is touching player
+        if (collision.CompareTag ("Enemy"))
+        {
+            Debug.Log ("The player is touching " + collision.tag + " tag!");
+        }
 
+    }
 }
