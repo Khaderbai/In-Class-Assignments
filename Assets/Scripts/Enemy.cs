@@ -9,12 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    private Vector2 movementDirection;
+    public Vector2 movementDirection = Vector2.right;
 
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        movementDirection = Vector2.right;
     }
 
     // Update is called once per frame
